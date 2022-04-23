@@ -1,0 +1,17 @@
+{
+    "name": "oxmohsen/validating-data",
+    "description": "example of how to validate incoming data from web app telegram bot to ensure that the data is come from telegram.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "OxMohsen\\TgBot\\": "src/"
+        },
+        "files": ["Config.php"]
+    },
+    "authors": [
+        {
+            "name": "Mohsen Falakedin",
+            "email": "oxmohsen@oxmohsen.ir"
+        }
+    ]
+}
