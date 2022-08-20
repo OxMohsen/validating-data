@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="phpcs.xsd">
+    <description>PHP Code Sniffer</description>
+
+    <arg value="snp"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <file>.</file>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <rule ref="PSR12"/>
+</ruleset>
