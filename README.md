@@ -78,31 +78,35 @@ These instructions will get you a copy of the project and show you how to use it
 You'll need [Git](https://git-scm.com) and [composer](https://getcomposer.org/download/)
 
 ### Installation
+1. using composer
+   ```sh
+   composer require oxmohsen/validating-data
+   ```
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/OxMohsen/validating-data.git
-   ```
-2. move to the directory
-   ```sh
-   cd validating-data
-   ```
-3. Install composer packages
-   ```sh
-   composer install
-   ```
+2. install manually
+    - Clone the repo
+        ```sh
+        git clone https://github.com/OxMohsen/validating-data.git
+        ```
+    - move to the directory
+        ```sh
+        cd validating-data
+        ```
+    - Install composer packages
+        ```sh
+        composer install
+        ```
 
 ### Usage
-1. Enter your Bot Token in `Config.php`
+1. load the project
+    ```php
+    require_once __DIR__ . '/vendor/autoload.php';
+
+    use OxMohsen\TgBot\Validate;
+    ```
+2. use the Validate class to validate initData
    ```php
-   public const BOT_TOKEN = 'YOUR_BOT_TOKEN';
-   ```
-2. load the project and use the Validate class to validate data
-   ```php
-   <?php
-   require_once 'vendor/autoload.php';
-   use OxMohsen\TgBot\Validate;
-   if (Validate::isSafe($initData)) {
+   if (Validate::isSafe($bot_token, $initData)) {
        echo 'valid data';
    } else {
        echo 'invalid data';
