@@ -5,8 +5,7 @@
     "autoload": {
         "psr-4": {
             "OxMohsen\\TgBot\\": "src/"
-        },
-        "files": ["Config.php"]
+        }
     },
     "authors": [
         {
